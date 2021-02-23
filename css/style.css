@@ -1,0 +1,14 @@
+/* Variables */
+
+:root {
+    --basic-red: #EE3643;
+    --basic-greylight: #C5C5C5;
+    --basic-background: #F1F5F7;
+    --basic-white: #FFFFFF;
+    --basic-grey: #3D546F;
+    --basic-green: #63A63E;
+    --basic-success: #5FBB2D;
+    --basic-error: #BA2732;
+  
+    --special: #FFBF47;
+  }                                          
