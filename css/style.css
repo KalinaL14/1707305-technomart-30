@@ -11,4 +11,101 @@
     --basic-error: #BA2732;
   
     --special: #FFBF47;
-  }                                          
+  }   
+  body {
+      padding: 0px;
+      margin: 0px;
+      font-family: Cuprum;
+      font-style: normal;
+      width: 1200px;
+      height: 3151px;
+      background: #FFFFFF;
+  }  
+
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+ h1 {
+  display: none;
+ }
+ .header {
+  background: #F1F5F7;
+  width: 1200px;
+  height: 320px;
+ }
+
+  .header-menu {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    background: #293449;
+    width: 1200px;
+    height: 42px;
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding-left: 130px;
+    padding-right: 130px;
+
+  } 
+  .menu-logo {
+    max-height: 47px;
+  }  
+  .menu-search {
+    padding-left: 367px;
+    
+  } 
+  .header-section {
+    
+  } 
+  
+  .header-section-menu {
+
+  }
+  .main-blocks {
+
+  }
+  .slider {
+
+  }
+
+  .catalog-list {
+    background: #F9F5F0;
+    width: 940px;
+    height: 89px;
+  }
+  .section-companies {
+    background: #F9F5F0;
+    width: 940px;
+    height: 89px;
+  }
+  .section-services {
+    background: #F1F5F7;
+    width: 1200px;
+    height: 522px;
+    
+  }
+  .section-about {
+
+  }
+  .footer-menu {
+
+  }
+  .main-breadcrumbs {
+
+  }
+  .main-filters {
+
+  }
+  .products {
+
+  }

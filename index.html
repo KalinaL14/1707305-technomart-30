@@ -7,28 +7,33 @@
     <link rel="icon" href="icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="152.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap">
+    <link href="/css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-<nav>
-  <a href="#">Техномарт</a>
+    <header class="header">
+<nav class="header-menu">
+  <a class="menu-logo" href="#">
+    <img src="icons/logo.png" width="220" height="47" alt="Логотип «Техномарт»">
+  </a>
   <form action="#" method="POST">
-    <input type="search" placeholder="Поиск:">
+    <input class="menu-search" type="search" placeholder="Поиск:">
   </form>
-  <a href="#">Закладки</a>
-  <a href="#">Корзина</a>
-  <a href="#">Оформить заказ</a>
+  <a class="menu-link" href="#">Закладки</a>
+  <a class="menu-basket" href="#">Корзина</a>
+  <a class="menu-modal" href="#">Оформить заказ</a>
 </nav>
-<section>
-  <h1>Об организации</h1>
+<section class="header-section ">
+  <h1 class="section-contact">Об организации</h1>
 <i>Интернет-магазин <br> строительных материалов <br>и инструментов для ремонта</i>
 <img src="icons/icon-phone.svg" alt="Телефон"> <a href="tel:+78125550555">+7 (812) 555-05-55</a>
 <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-<a href="#">Войти</a>
-<a href="#">Регистрация</a>
+<a class="section-login" href="#">Войти</a>
+<a class="section-link" href="#">Регистрация</a>
 </section>
-<nav>
-  <ul>
+<nav class="header-section-menu">
+  <ul class="section-items">
     <li><a href="#">Главная</a></li>
     <li><a href="#">Компания</a></li>
     <li><a href="#">Каталог</a></li>
@@ -40,42 +45,41 @@
 </nav>
     </header>
   <main>
-    <section>
+    <section class="main-blocks">
 <h1>Основные разделы</h1>
 <ul>
-<li>Материалы
+<li class="">Материалы
   <a href="#">На любой вкус</a>
 </li>
-<li>Инструмент
+<li class="">Инструмент
   <a href="#">На все случаи</a>
 </li>
-<li>Техника
+<li class="">Техника
   <a href="#">Для стройки</a>
 </li>
-<li>Скидки 50%
+<li class="">Скидки 50%
   <a href="#">На 350 товаров</a>
 </li>
-<li>Доставка
+<li class="">Доставка
   <a href="#">Бесплатно</a>
 </li>
 </ul>
 <div class="slider">Перфораторы
   <a href="#">Открыть каталог</a>
  <ul>
-   <li>Slide 1</li>
-   <li>Slide 2</li>
-   <li>Slide 3</li>
+   <li class="slider-1">Slide 1</li>
+   <li class="slider-2">Slide 2</li>
  </ul>
-  <button>Left arrow</button>
-  <button>Right arrow</button>
+  <button class="button-left">Left arrow</button>
+  <button class="button-right">Right arrow</button>
 </div>
-
     </section>
-    <section>
+
+    <section class="catalog-list">
       <h2>Популярные товары</h2>
       <a href="#">Все популярные товары</a>
       <ul>
-        <li>
+        <li class="catalog-item">
           <a href="#">
   
             <figure>
@@ -85,12 +89,12 @@
           </a>
           <p>
             <s>32500 р</s>
-            <button type="button">25500</button>
+            <button class="" type="button">25500</button>
           </p>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
+          <button class="" type="button">Купить</button>
+          <button class="" type="button">В закладки</button>
         </li>
-        <li>
+        <li class="catalog-item">
           <a href="#">
             
             <figure>
@@ -100,12 +104,12 @@
           </a>
           <p>
             <s>22500 р</s>
-            <button type="button">15500</button>
+            <button class="" type="button">15500</button>
           </p>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
+          <button class="" type="button">Купить</button>
+          <button class="" type="button">В закладки</button>
         </li>
-        <li>
+        <li class="catalog-item">
           <a href="#">
             
             <figure>
@@ -115,12 +119,12 @@
           </a>
           <p>
             <s>30500 р</s>
-            <button type="button">25500</button>
+            <button class="" type="button">25500</button>
           </p>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
+          <button class="" type="button">Купить</button>
+          <button class="" type="button">В закладки</button>
         </li>
-        <li>
+        <li class="catalog-item">
           <a href="#">
             
             <figure>
@@ -130,17 +134,17 @@
           </a>
           <p>
             <s>22500 р</s>
-            <button type="button">12500</button>
+            <button class="" type="button">12500</button>
           </p>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
+          <button class="" type="button">Купить</button>
+          <button class="" type="button">В закладки</button>
         </li>
       </ul>
     </section>
-    <section>
+    <section class="section-companies">
 <h4>Популярные производители</h4>
 <button>Все производители</button>
-<ul>
+<ul class="box-list">
 <li><a href="#"><img src="img/bosch.png" alt="Bosch"></a></li>
 <li><a href="#"><img src="img/Makita.png" alt="Makita"></a></li>
 <li><a href="#"><img src="img/DeWALT.png" alt="DeWALT"></a></li>
@@ -151,32 +155,32 @@
 <li><a href="#"><img src="img/Metabo.png" alt="Metabo"></a></li>
 </ul>
     </section>
-    <section>
-<h5>Сервисы</h5>
+    <section class="section-services">
+<h5 class="">Сервисы</h5>
 <p>Хороший интернет-магазин отличается от плохого не только ценами!
   Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-  <button>Доставка</button>
-  <button>Гарантия</button>
-  <button>Кредит</button>
-  <h5>Доставка</h5>
-  <ul>
-    <li>Доставка</li>
+  <button class="">Доставка</button>
+  <button class="">Гарантия</button>
+  <button class="">Кредит</button>
+  <h5 class="">Доставка</h5>
+  <ul class="">
+    <li class="">Доставка</li>
   <p>Мы с удовольствием доставим ваш товар прямо
     к вашему подъезду совершенно бесплатно!
     Ведь мы неплохо заработаем, 
     поднимая его на ваш этаж!</p>
-    <li>Гарантия</li> <!-- Невидимый блок visibility: hidden; -->
-    <li>Кредит</li> <!-- Невидимый блок visibility: hidden; -->
+    <li class="">Гарантия</li> <!-- Невидимый блок visibility: hidden; -->
+    <li class="">Кредит</li> <!-- Невидимый блок visibility: hidden; -->
   </ul>
     </section>
-    <section>
+    <section class="section-about">
 <h6>О нас</h6>
 <p>КОМПАНИЯ «Техномарт»</p>
 <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
 
   Мы можем доставить ваш товар в самые отдаленные точки России!
   Техномарт работает со многими транспортными компаниями:</p>
-  <ul>
+  <ul class="">
     <li>Деловые линии</li>
     <li>Автотрейдинг</li>
     <li>ЖелДорЭкспедиция</li>
@@ -190,8 +194,8 @@
   <img src="img/karta.png" width="300" height="158" alt="Карта">
   <button>Заблудились?Напишите нам!</button>
 </main>
-<footer>
-  <ul>
+<footer class="footer-menu">
+  <ul class="footer-list">
     <li><a href="#"><img src="icons/logo.png" alt="Техномарт"></a></li>
     <li><a href="#">Компания</a></li>
     <li><a href="#">Новости</a></li>
@@ -202,7 +206,7 @@
 
     <P>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>+7 (812) 555-05-55</P>
 
-    <ul>
+    <ul class="footer-items">
       <li><a href="#">Материалы</a></li>
       <li><a href="#">Техника</a></li>
       <li><a href="#">Инструмент</a></li>
@@ -211,7 +215,7 @@
 
       <div>
        <p> © 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
-        <ul>
+        <ul class="footer-social">
           <li><a href="#">Вконтакте</a></li>
           <li><a href="#">Фейсбук</a></li>
           <li><a href="#">Инстаграм</a></li>
