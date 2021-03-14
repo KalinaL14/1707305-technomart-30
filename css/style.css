@@ -12,64 +12,6 @@
   
     --special: #FFBF47;
   }  
-/*Шрифты*/
-
-@font-face {
-  font-family: 'Cuprum';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Cuprum Regular'), local('Cuprum-Regular'),
-    url('../fonts/cuprum.woff2') format('woff2'),
-    url('../fonts/cuprum.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Cuprum';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Cuprum Bold'), local('Cuprum-Bold'),
-    url('../fonts/cuprumbold.woff2') format('woff2'),
-    url('../fonts/cuprumbold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Cuprum';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Cuprum Bold Italic'), local('Cuprum-BoldItalic'),
-    url('../fonts/cuprumbolditalic.woff2') format('woff2'),
-    url('../fonts/cuprumbolditalic.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Cuprum';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Cuprum Italic'), local('Cuprum-Italic'),
-    url('../fonts/cuprumitalic.woff2') format('woff2'),
-    url('../fonts/cuprumitalic.woff') format('woff');
-}
-
-/* PT Sans */
-
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('PT Sans'), local('PTSans-Regular'),
-    url('../fonts/ptsans.woff2') format('woff2'),
-    url('../fonts/ptsans.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('PT Sans Bold'), local('PTSans-Bold'),
-    url('../fonts/ptsansbold.woff2') format('woff2'),
-    url('../fonts/ptsansbold.woff') format('woff');
-}
-
 
 .page {
     height: 100%;
@@ -141,6 +83,7 @@
  .header {
   background: #F1F5F7;
   position: relative;
+  height: 320px;
   
  }
 
@@ -322,14 +265,20 @@
 
   .menu-item {
     color: #FFFFFF;
-    
-
   }
+  /*Блоки*/
+
   .main-blocks {
     padding-left: 130px;
     padding-right: 130px;
     list-style-type: none;
-    position: relative;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: 
+        "blok-materials block-tool block-technique"
+        "container container block-sales"
+        "container container block-delivery";
+    gap: 20px;
   }
 
   .blok-materials {
@@ -660,7 +609,6 @@ a.gold:active {
 .container {
   width: 620px;
   height: 266px;
-  margin-left: 130px;
   margin-right: 0px;
   margin-top: 0px;
   padding: 0px;
