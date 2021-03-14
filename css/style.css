@@ -12,7 +12,65 @@
   
     --special: #FFBF47;
   }  
-  
+/*Шрифты*/
+
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cuprum Regular'), local('Cuprum-Regular'),
+    url('../fonts/cuprum.woff2') format('woff2'),
+    url('../fonts/cuprum.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cuprum Bold'), local('Cuprum-Bold'),
+    url('../fonts/cuprumbold.woff2') format('woff2'),
+    url('../fonts/cuprumbold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Cuprum Bold Italic'), local('Cuprum-BoldItalic'),
+    url('../fonts/cuprumbolditalic.woff2') format('woff2'),
+    url('../fonts/cuprumbolditalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Cuprum Italic'), local('Cuprum-Italic'),
+    url('../fonts/cuprumitalic.woff2') format('woff2'),
+    url('../fonts/cuprumitalic.woff') format('woff');
+}
+
+/* PT Sans */
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'),
+    url('../fonts/ptsans.woff2') format('woff2'),
+    url('../fonts/ptsans.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'),
+    url('../fonts/ptsansbold.woff2') format('woff2'),
+    url('../fonts/ptsansbold.woff') format('woff');
+}
+
+
 .page {
     height: 100%;
   }
@@ -47,15 +105,15 @@
 }
 
   body {
-      padding: 0px;
-      margin: 0 auto;
-      font-family: "Сuprum", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      width: 1200px;
-      background: #FFFFFF;
-      padding-left: 130px;
-      padding-right: 130px;
+    padding: 0px;
+    margin: 0 auto;
+    font-family: "Сuprum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    width: 1200px;
+    background: #FFFFFF;
+    padding-left: 130px;
+    padding-right: 130px;
      
   }  
 
@@ -71,6 +129,7 @@
  h1, h2, h3, h4, h5,h6 {
   text-transform: uppercase;
  }
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -88,7 +147,6 @@
 .header-menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   background: #293449; 
   padding-left: 130px;
   box-sizing: border-box;
@@ -100,10 +158,9 @@
   } 
     
   .logo-text {
-   position: absolute;
-   left: 187px;
-   top: 13px;
-   
+   padding-left: 56px;
+   padding-right: 56px;
+   align-self: center;
   }
   .icon-opacity {
     mix-blend-mode: normal;
@@ -111,6 +168,9 @@
   }
 
   .menu-logo {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     background: #EE3643;
     width: 220px;
     height: 47px;
@@ -118,96 +178,113 @@
   }
  
   .menu-search {
-    padding-top: 10px;
-    background-color: #293449;
     border: none; 
     color: #FFFFFF;
+    background-color: inherit;
     
   } 
+  .header-search {
+    display: flex;
+    flex-direction: row;
+    padding-top: 4px;
+    margin-left: 19px;
+    
+  }
+  .container-menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    min-width: 450px;
+
+  }
   .menu-modal {
     color: #FFFFFF;
-    margin-right: 130px;
     background: #63A63E;
-    width: 150px;
-    height: 42px;
     box-sizing: border-box;
-    padding-top: 10px;
-    padding-left: 2px;
-    margin-left: 26px;
+    padding-top: 9px;
+    flex-basis: 150px;
+    
     
   }
 
   .menu-link {
     color: #FFFFFF;
-    padding-left: 50px;
-    padding-top: 10px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    flex-basis: 150px;
     
   }
 
   .menu-basket {
     color: #FFFFFF;
-    padding-left: 26px;
-    padding-top: 10px;
-    margin-left: 50px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    flex-basis: 150px;
     
   }
-
+/* Cредняя часть меню*/
   .header-section {
     padding-left: 130px;
     padding-right: 130px;
     display: flex;
     flex-flow: row wrap;
-    justify-content:space-around;
-    align-items: center;
+    justify-content: flex-start;
     box-sizing: border-box;
+    margin-top: 46px;
+    background: #F1F5F7;
     
   } 
   .section-info {
     font-size: 16px;
     line-height: 23px;
     font-style: italic;
-    color: #EE3643;  
-    margin-top: 37px;
+    color: #EE3643;
+    margin-top: -5px;  
     margin-right: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
   }
   .section-contacts {
     display: flex;
     flex-flow: column wrap;
+
     font-style: normal;
     font-size: 14px;
     line-height: 24px;
+
   }
   .section-telefon {
-    background: #F3F7F9;
+    display: inline-block;
+    padding: 6px 42px 6px 36px;
     border: 3px solid #FFFFFF;
-    text-align: center;
     color: var(--basic-red);
     font-weight: bold;
     font-size: 21px;
     line-height: 30px;
-    padding: 4px 42px 5px 45px;
-    margin-top: 53px;
     margin-left: 93px;
+    padding-top: 10px;
+    text-align: center;
   }
 
   .section-adress {
     text-align: center;
     color: #000000;
     margin-top: 3px;
+    margin-left: 103px;
     
   }
   .section-login {
+    display: flex;
+    align-items: center;
+    text-align: center;
     font-size: 21px;
     line-height: 21px;
     color: #000000;
     background: #F3F7F9;
-    border: 3px solid #FFFFFF;
-    margin-top: 46px;
     width: 121px;
-    margin-left: 10px;
+    margin-left: 69px;
     height: 45px;
-    padding-left: 29px;
-    padding-top: 20px;
+  
     
   }
   .section-link {
@@ -215,12 +292,11 @@
     line-height: 21px;
     color: #000000; 
     background: #F3F7F9;
-    border: 3px solid #FFFFFF;
-    padding-left: 26px;
-    padding-top: 20px;
-    margin-top: 46px;
     width: 150px;
     height: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
     
   }
 

@@ -8,6 +8,8 @@
     <link rel="apple-touch-icon" href="152.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link href="/fonts" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap">
     <link href="/css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -21,24 +23,24 @@
         </svg>
       </a>
        
-     
-      <form action="#" method="POST">
-        <img class="icon-opacity" src="/icons/icon-search.svg" alt="Поиск">
+      <form class="header-search" action="#" method="POST">
+        <img class="icon-opacity" src="/icons/icon-search.svg" width="17" height="17" alt="Поиск по сайту">
         <input class="menu-search" type="search" placeholder="Поиск:" width="271">
       </form>
-    
-      <a class="menu-link" href="#">
-        <img class="icon-opacity" src="/icons/icon-bookmark.svg" alt="Закладки">
-        Закладки: 0</a>
 
-      <a class="menu-basket" href="#">
-        <img class="icon-opacity"src="/icons/icon-cart.svg" alt="Корзина">
-        Корзина: 0</a>
-      <a  class="menu-modal" href="#">
-        Оформить заказ</a>
-    
+      <div class="container-menu">
+        <a class="menu-link" href="#">
+          <img class="icon-opacity" src="/icons/icon-bookmark.svg" alt="Закладки">
+          Закладки: 0</a>
+
+        <a class="menu-basket" href="#">
+          <img class="icon-opacity"src="/icons/icon-cart.svg" alt="Корзина">
+          Корзина: 0</a>
+        <a  class="menu-modal" href="#">
+          Оформить заказ</a>
+      </div>
     </nav>
-<section class="header-section ">
+    <section class="header-section ">
   <h1 class="visually-hidden">Об организации</h1> 
 <div class="section-info">Интернет-магазин <br> строительных материалов <br>и инструментов для ремонта</div>
 <div class="section-contacts">
@@ -56,18 +58,20 @@
 
 <a class="section-link" href="#">
   Регистрация</a>
-</section>
-<nav class="header-section-menu">
-  <ul class="section-items cumpum2">
-    <li><a class="menu-item" href="#">Главная</a></li>
-    <li><a class="menu-item" href="#">Компания</a></li>
-    <li><a class="menu-item" href="#">Каталог</a></li>
-    <li><a class="menu-item" href="#">Новости</a></li>
-    <li><a class="menu-item" href="#">Спецпредложения</a></li>
-    <li><a class="menu-item" href="#">Доставка</a></li>
-    <li><a class="menu-item" href="#">Контакты</a></li>
-  </ul>
-</nav>
+
+  <nav class="header-section-menu">
+    <ul class="section-items cumpum2">
+      <li><a class="menu-item" href="#">Главная</a></li>
+      <li><a class="menu-item" href="#">Компания</a></li>
+      <li><a class="menu-item" href="#">Каталог</a></li>
+      <li><a class="menu-item" href="#">Новости</a></li>
+      <li><a class="menu-item" href="#">Спецпредложения</a></li>
+      <li><a class="menu-item" href="#">Доставка</a></li>
+      <li><a class="menu-item" href="#">Контакты</a></li>
+    </ul>
+  </nav>
+
+    </section>
   </header>
   <main>
   <section>
@@ -245,7 +249,6 @@
     </div>
     <div class="map">
       <h6 heading>Контакты</h6>
-
       <p>Вы можете забрать товар сами,
       заехав в наш офис:</p>
       <img src="img/karta.png" width="300" height="158" alt="Карта">
