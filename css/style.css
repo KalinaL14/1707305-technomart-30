@@ -16,20 +16,6 @@
 .page {
     height: 100%;
   }
-.cumpum2 {
-  font-family: "Сuprum", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 24px;
-}
-.sans-normal {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
-  color: #000000;
-  font-size: 18px;
-  line-height: 20px;
-}
 
 .new {
   background: #EE3643;
@@ -49,9 +35,11 @@
   body {
     padding: 0px;
     margin: 0 auto;
-    font-family: "Сuprum", "Arial", sans-serif;
+    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
     width: 1200px;
     background: #FFFFFF;
     padding-left: 130px;
@@ -84,12 +72,13 @@
   background: #F1F5F7;
   position: relative;
   height: 320px;
-  
+  margin-bottom: 59px; 
  }
 
 .header-menu {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   background: #293449; 
   padding-left: 130px;
   box-sizing: border-box;
@@ -99,15 +88,15 @@
   text-align: center;
   position: relative;
   } 
+
+  img.header-search {
+    opacity: 0.3;
+  }
     
   .logo-text {
    padding-left: 56px;
    padding-right: 56px;
    align-self: center;
-  }
-  .icon-opacity {
-    mix-blend-mode: normal;
-    opacity: 0.3;
   }
 
   .menu-logo {
@@ -127,17 +116,16 @@
     
   } 
   .header-search {
-    display: flex;
-    flex-direction: row;
-    padding-top: 4px;
-    margin-left: 19px;
-    
+    padding-top: 10px;
+
   }
+
   .container-menu {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
     min-width: 450px;
+    padding-right: 130px;
 
   }
   .menu-modal {
@@ -155,7 +143,21 @@
     padding-top: 9px;
     padding-bottom: 9px;
     flex-basis: 150px;
+    position: relative;
+    padding-left: 0px;
     
+  }
+  a.menu-link::before {
+    content: "";
+    position: absolute;
+    width: 14px;;
+    height: 16px;
+    top: 13px;
+    left: 10px;
+    background: url(../icons/icon-bookmark.svg) no-repeat;
+    background-size: contain;
+    opacity: 0.3;
+
   }
 
   .menu-basket {
@@ -163,8 +165,21 @@
     padding-top: 9px;
     padding-bottom: 9px;
     flex-basis: 150px;
-    
+    position: relative;  
   }
+
+  a.menu-basket::before {
+    content: "";
+    position: absolute;
+    width: 15px;;
+    height: 15px;
+    top: 13px;
+    left: 10px;
+    background: url(../icons/icon-cart.svg) no-repeat;
+    background-size: contain;
+    opacity: 0.3;
+  }
+
 /* Cредняя часть меню*/
   .header-section {
     padding-left: 130px;
@@ -205,9 +220,20 @@
     font-size: 21px;
     line-height: 30px;
     margin-left: 93px;
-    padding-top: 10px;
-    text-align: center;
+    padding-left: 74px;
+    position: relative;
   }
+  a.section-telefon::before {
+    content: "";
+    position: absolute;
+    width: 17px;;
+    height: 19px;
+    left: 39px;
+    top: 13px;
+    background: url(../icons/icon-phone.svg) no-repeat;
+    background-size: contain;
+  }
+
 
   .section-adress {
     text-align: center;
@@ -240,7 +266,10 @@
     display: flex;
     align-items: center;
     text-align: center;
-    
+    justify-content: center;
+    left: 24px;
+    top: 12px;
+    margin-left: 10px;
   }
 
   .header-section-menu {
@@ -273,28 +302,43 @@
     padding-right: 130px;
     list-style-type: none;
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: repeat(3, 300px);
     grid-template-areas: 
-        "blok-materials block-tool block-technique"
+        "block-materials block-tool block-technique"
         "container container block-sales"
         "container container block-delivery";
     gap: 20px;
   }
 
-  .blok-materials {
+  .heading-block {
     font-weight: bold;
-    font-style: normal;
     font-size: 24px;
     line-height: 30px;
     color: #FFFFFF;
+    top: 20px;
+    left: 23px;
+
+  }
+
+  .block-materials {
     background: #FFBF47;
     width: 300px;
     height: 123px;
-    
-    
+    grid-area: block-materials;  
+  }
+  .block-materials::before {
+    content: "";
+    position: absolute;
+    width: 44px;;
+    height: 65px;
+    right: 38px;
+    top: 32px;
+    background: url(../icons/icon-1.svg) no-repeat;
+    background-size: contain;
   }
   .materials-button {
     background: #FFFFFF;
+    opacity: 0.3;
     width: 135px;
     height: 38px;
     mix-blend-mode: normal;
@@ -306,83 +350,121 @@
   }
 
   .block-tool {
-    font-weight: bold;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 30px;
-    color: #FFFFFF;
     background: #3BBCE3;
     width: 300px;
     height: 123px;
+    grid-area: block-tool;
   }
+
+  .block-tool::before {
+    content: "";
+    position: absolute;
+    width: 75px;;
+    height: 61px;
+    right: 38px;
+    top: 32px;
+    background: url(../icons/icon-2.svg) no-repeat;
+    background-size: contain;
+  }
+
   .block-technique {
-    font-weight: bold;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 30px;
-    color: #FFFFFF;
     background: #DC91D8;
     width: 300px;
     height: 123px;
+    grid-area: block-technique;
   }
+  .block-technique::before {
+    content: "";
+    position: absolute;
+    width: 78px;;
+    height: 62px;
+    right: 38px;
+    top: 32px;
+    background: url(../icons/icon-3.svg) no-repeat;
+    background-size: contain;
+  }
+
   .block-sales {
-    font-weight: bold;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 30px;
-    color: #FFFFFF;
     background: #8ED78F;
     width: 300px;
     height: 123px;
+    grid-area: block-sales;
   }
+
+  .block-sales::before {
+    content: "";
+    position: absolute;
+    width: 59px;
+    height: 72px;
+    right: 38px;
+    top: 32px;
+    background: url(../icons/icon-4.svg) no-repeat;
+    background-size: contain;
+  }
+
   .block-delivery {
-    font-weight: bold;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 30px;
-    color: #FFFFFF;
     background: #FFC047;
     width: 300px;
     height: 123px;
+    grid-area: block-delivery;
   }
+
+  .block-delivery::before {
+    content: "";
+    position: absolute;
+    width: 78px;;
+    height: 53px;
+    right: 38px;
+    top: 32px;
+    background: url(../icons/icon-5.svg) no-repeat;
+    background-size: contain;
+  }
+  /*Популярные товары */
   
 
   .section-catalog {
     padding-left: 130px;
-    padding-right: 130px;
-    
-     
+    padding-right: 130px;  
   }
   
-
   .popular-product {
     background: #F9F5F0;
     display: flex;
     flex-flow: row wrap;
     justify-content:space-between; 
+    margin-top: 59px;
+    
+    
+  }
+  .popular-heading {
     font-weight: normal;
     font-size: 30px;
     line-height: 30px;
     color: #32425C;
     text-transform: uppercase;
-
-
+    padding-left: 28px;
+    padding-top: 29px;
+    padding-bottom: 30px;
   }
+
 .popular-button {
-    font-size: 14px;
-    line-height: 18px;
-    color: #FFFFFF; 
-    background: #EE3643;
-    width: 192px;
-    height: 38px;
-    margin-top: 25px;
-    text-align: center;
-    text-transform: uppercase;
-    left: 12.5%;
-    right: 12.5%;
-    top: 28.95%;
-    bottom: 23.68%;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+  background: #EE3643;
+  width: 192px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  margin-right: 14px;
+  margin-top: 25px;
+  margin-bottom: 26px;
+  text-transform: uppercase;
+  justify-content: center;
+  
 }
+
   .list-products {
     list-style-type: none;
     display: flex;
@@ -397,6 +479,8 @@
     width: 220px;
     height: 318px;
   }
+  /*Популярные производители*/
+
   .section-companies {
     padding-left: 130px;
     padding-right: 130px;
@@ -616,6 +700,7 @@ a.gold:active {
   background-image: url("/img/slayer\(1\).jpg");
   background-repeat: no-repeat;
   background-position: left;
+  grid-area: container;
 }
 .slider {
   position: relative;
@@ -629,8 +714,6 @@ a.gold:active {
   list-style: none;
 }
 .slide-title {
-  font-family: "Сuprum", sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
@@ -641,7 +724,7 @@ a.gold:active {
   width: 192px;
   height: 38px;
   background: #EE3643;
-  font-family: "Сuprum", sans-serif;
+  font-family: "Cuprum", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
