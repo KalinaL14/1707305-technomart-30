@@ -445,6 +445,7 @@
     padding-left: 28px;
     padding-top: 29px;
     padding-bottom: 30px;
+    margin: 0px;
   }
 
 .popular-button {
@@ -469,24 +470,52 @@
     list-style-type: none;
     display: flex;
     flex-flow: row wrap;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    padding-left: 0px;
+    padding-right: 0px;
     
     
   }
   .catalog-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
     box-sizing: border-box;
     width: 220px;
     height: 318px;
+    margin-right: 20px;
+  }
+  .catalog-item:nth-child(4n)  {
+    margin-right: 0px;
+  }
+  del {
+    align-items: center;
+    text-align: center;
+    text-decoration-line: line-through;
+    text-transform: uppercase;
+    color: #A9A9A9;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 18px;
+
+  }
+  .price {
+    background-image: url(../img/Shape.png) no-repeat;
+    background: red;
+    background-size: 141px 38px;
+    
   }
   /*Популярные производители*/
 
   .section-companies {
     padding-left: 130px;
     padding-right: 130px;
-    list-style-type: none;
-    
-    
+    list-style-type: none;  
     
   }
   .box-list {
