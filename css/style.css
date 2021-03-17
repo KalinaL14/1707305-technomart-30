@@ -310,6 +310,7 @@
         "container container block-sales"
         "container container block-delivery";
     grid-row-gap: 20px;
+    grid-column-gap: 20px;
   }
 
   .heading-block {
@@ -666,6 +667,7 @@
     width: 300px;
     margin-top: 25px;
     margin-bottom: 70px;
+    margin-right: 0px;
   }
 
 /*Footer*/
@@ -684,22 +686,50 @@
     padding-right: 130px;
     
   }
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
 
   .footer-menu-items {
     display: flex;
     flex-flow: row wrap;
     list-style-type: none;
     color: #F1F5F7;
+    margin-top: 37px;
+    margin-bottom: 34px;
   }
-    
+  .footer-item {
+    padding-left: 58px;
+  }
+
+  .footer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 54px;
+  }
+
   .footer-items {
     list-style-type: none;
     display: flex;
+    margin-top: 0px;
+
+    
+  }
+  .footer-items_padding {
+    padding-left: 58px;
   }
 
   .footer-block p {
     color: #FFFFFF;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
+
   .footer-block_social {
     display: flex;
     flex-flow:row wrap;
@@ -712,6 +742,10 @@
     align-items: center;
 
   }
+  .footer-block_social p {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
 
   .footer-social {
     display: flex;
@@ -721,6 +755,8 @@
     margin-right: 118px;
     padding-left: 0px;
     justify-content: flex-start;
+    margin-top: 35px;
+    margin-bottom: 35px;
     
   }
   
@@ -815,25 +851,6 @@ a.gold:active {
   line-height: 36px;
   text-transform: uppercase;
 }
-.button {
-  display: inline-block;
-  width: 192px;
-  height: 38px;
-  background: #EE3643;
-  font-family: "Cuprum", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  vertical-align: top;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  /* padding-left: 46px; */
-}
 .button:hover {
   background: #CA2C37;
 }
@@ -860,8 +877,31 @@ a.gold:active {
   cursor: pointer;
     
 }
+.slider-btn-left {
+  left: 24px;
+  background-image: url("../icons/icon-left.svg");
+  
+}
 
-.slider-controls.current {
+.slider-btn-right {
+  right: 20px;
+  background-image: url("../icons/icon-left.svg");
+  transform: rotate(180deg);
+
+}
+.slider-btn-left,
+.slider-btn-right {
+  border: none;
+  width: 22px;
+  height: 40px;
+  position: absolute;
+  top: 122px;
+  /*background-color: transparent;*/
+  cursor: pointer;
+  
+}
+
+.current {
   background-color: #EE3643;
      
 }
